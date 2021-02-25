@@ -28,4 +28,16 @@ class FoodItemTableViewCell: UITableViewCell {
             numberOfItemsLabel.text = item?.noOfItems
         }
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+       // viewGradient.setGradientBackground(colorOne: .clear, colorTwo: .black)
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
 }

@@ -57,6 +57,9 @@
 		BBA8CAAE25E8200100EE97A7 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CAAD25E8200100EE97A7 /* FoodItemTableViewCell.swift */; };
 		BBA8CAB125E8210300EE97A7 /* NoodleSubItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CAB025E8210300EE97A7 /* NoodleSubItemViewController.swift */; };
 		BBA8CAB425E8218000EE97A7 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CAB325E8218000EE97A7 /* ItemDetailViewController.swift */; };
+		BBA8CADF25E823C600EE97A7 /* viewStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CADE25E823C600EE97A7 /* viewStar.swift */; };
+		BBA8CAE325E823CC00EE97A7 /* viewStar.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBA8CAE225E823CC00EE97A7 /* viewStar.xib */; };
+		BBA8CAE625E8242100EE97A7 /* SubItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CAE525E8242100EE97A7 /* SubItemCollectionViewCell.swift */; };
 		BBDEF39C25E7EBB3006CB81F /* Extension+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF39B25E7EBB3006CB81F /* Extension+AlertController.swift */; };
 		BBDEF39F25E7EC2C006CB81F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF39E25E7EC2C006CB81F /* Constants.swift */; };
 		BBDEF3A225E7EC39006CB81F /* MessageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3A125E7EC39006CB81F /* MessageConstant.swift */; };
@@ -130,6 +133,9 @@
 		BBA8CAAD25E8200100EE97A7 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		BBA8CAB025E8210300EE97A7 /* NoodleSubItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoodleSubItemViewController.swift; sourceTree = "<group>"; };
 		BBA8CAB325E8218000EE97A7 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		BBA8CADE25E823C600EE97A7 /* viewStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewStar.swift; sourceTree = "<group>"; };
+		BBA8CAE225E823CC00EE97A7 /* viewStar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = viewStar.xib; sourceTree = "<group>"; };
+		BBA8CAE525E8242100EE97A7 /* SubItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBDEF39B25E7EBB3006CB81F /* Extension+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+AlertController.swift"; sourceTree = "<group>"; };
 		BBDEF39E25E7EC2C006CB81F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBDEF3A125E7EC39006CB81F /* MessageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConstant.swift; sourceTree = "<group>"; };
@@ -229,7 +235,10 @@
 		BB34B78C25E7E5330005BDCE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BBA8CADD25E8237200EE97A7 /* Detail */,
+				BBA8CADC25E8236C00EE97A7 /* SubItems */,
 				BB34B77F25E7E4F70005BDCE /* LaunchScreen.storyboard */,
+				BBA8CAE525E8242100EE97A7 /* SubItemCollectionViewCell.swift */,
 				BBA8CAAD25E8200100EE97A7 /* FoodItemTableViewCell.swift */,
 			);
 			path = Views;
@@ -368,6 +377,22 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		BBA8CADC25E8236C00EE97A7 /* SubItems */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAE225E823CC00EE97A7 /* viewStar.xib */,
+				BBA8CADE25E823C600EE97A7 /* viewStar.swift */,
+			);
+			path = SubItems;
+			sourceTree = "<group>";
+		};
+		BBA8CADD25E8237200EE97A7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		BBDEF3AE25E7F56A006CB81F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +500,7 @@
 				BBA8CA7C25E81C0900EE97A7 /* Montserrat-ThinItalic.ttf in Resources */,
 				BBA8CA8D25E81C0900EE97A7 /* Raleway-ExtraLight.ttf in Resources */,
 				BBA8CA8F25E81C0900EE97A7 /* Raleway-SemiBold.ttf in Resources */,
+				BBA8CAE325E823CC00EE97A7 /* viewStar.xib in Resources */,
 				BBA8CA8E25E81C0900EE97A7 /* Raleway-Medium.ttf in Resources */,
 				BBA8CA9725E81C0900EE97A7 /* Raleway-BlackItalic.ttf in Resources */,
 				BBA8CA7825E81C0900EE97A7 /* Montserrat-LightItalic.ttf in Resources */,
@@ -557,6 +583,7 @@
 				BBDEF3B925E8046B006CB81F /* CustomCodableConformance.swift in Sources */,
 				BBDEF3B525E80409006CB81F /* AuthService.swift in Sources */,
 				BBDEF3D725E806EE006CB81F /* NoodleUser.swift in Sources */,
+				BBA8CADF25E823C600EE97A7 /* viewStar.swift in Sources */,
 				BBDEF3DE25E81385006CB81F /* NoodlesTabBarController.swift in Sources */,
 				BBDEF3B025E7F586006CB81F /* LoginAndRegisterViewController.swift in Sources */,
 				BB34B77225E7E4F60005BDCE /* AppDelegate.swift in Sources */,
@@ -572,6 +599,7 @@
 				BBDEF3D425E806D4006CB81F /* LogWrapper.swift in Sources */,
 				BBDEF3BF25E80492006CB81F /* StorageService.swift in Sources */,
 				BBA8CAA125E81C8300EE97A7 /* FoodSubItem.swift in Sources */,
+				BBA8CAE625E8242100EE97A7 /* SubItemCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

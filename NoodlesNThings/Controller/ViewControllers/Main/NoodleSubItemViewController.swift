@@ -112,7 +112,7 @@ class NoodleSubItemViewController: UIViewController, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colCellSubListing", for: indexPath) as! colCellSubItem
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colCellSubListing", for: indexPath) as! SubItemCollectionViewCell
         cell.subItem = subItems[indexPath.row]
         return cell
     }

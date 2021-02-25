@@ -102,8 +102,7 @@ extension NoodleItemViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item:FoodItem?
         item = items[indexPath.row]
-        
-        let subItemVC = self.storyboard?.instantiateViewController(withIdentifier: "SubItemVC") as! SubItemVC
+        let subItemVC = self.storyboard?.instantiateViewController(withIdentifier: "SubItemVC") as! NoodleSubItemViewController
         subItemVC.strSubItemTitle = item?.itemName
         self.navigationController?.pushViewController(subItemVC, animated: true)
     }
