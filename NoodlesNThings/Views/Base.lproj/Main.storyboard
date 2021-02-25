@@ -48,6 +48,9 @@
                                                 <state key="normal" title="LET'S EAT">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="JRO-GL-44k" kind="presentation" modalPresentationStyle="fullScreen" id="PZL-FK-UpK"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow black" translatesAutoresizingMaskIntoConstraints="NO" id="486-YY-iAO">
                                                 <rect key="frame" x="149" y="12.5" width="5" height="10"/>

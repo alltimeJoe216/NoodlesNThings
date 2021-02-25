@@ -9,25 +9,27 @@ import UIKit
 import Firebase
 
 class NoodlesTabBarController: UITabBarController {
+    
+    var user = AuthService.shared.user
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AuthService.shared.signOut
-        
+        authenticateUser()
+     
     }
     
     private func authenticateUser() {
         if let authUser = Auth.auth().currentUser {
             if AuthService.shared.user == nil {
-                let fameUser = NoodleUser(id: authUser.uid, email: authUser.email)
-                AuthService.shared.user = fameUser
+                let noodleUser = NoodleUser(id: authUser.uid, email: authUser.email)
+                AuthService.shared.user = noodleUser
             }
         } else {
             DispatchQueue.main.async {
-                guard let loginVC = self.storyboard?.instantiateViewController(identifier: OnboardViewController.identifier) else { return }
+                guard let onboard = self.storyboard?.instantiateViewController(identifier: OnboardViewController.identifier) else { return }
                 
-                loginVC.modalPresentationStyle = .fullScreen
-                self.present(loginVC, animated: true, completion: nil)
+                onboard.modalPresentationStyle = .fullScreen
+                self.present(onboard, animated: true, completion: nil)
             }
         }
     }

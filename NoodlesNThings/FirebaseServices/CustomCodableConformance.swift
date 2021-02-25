@@ -13,7 +13,6 @@ extension DatabaseReference {
     func setObject(_ object: NoodlesCodable, withCompletionBlock: @escaping (Error?, DatabaseReference?) -> Void) {
         self.setValue(object.toDictionary(), withCompletionBlock: withCompletionBlock)
     }
-    
 }
 
 /// Adopt Firebase Codable Conformance

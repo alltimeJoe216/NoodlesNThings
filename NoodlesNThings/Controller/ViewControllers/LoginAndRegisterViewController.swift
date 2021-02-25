@@ -42,7 +42,7 @@ class LoginAndRegisterViewController: UIViewController {
         navigationItem.setHidesBackButton(false, animated: true)
         
         /// Send it!!!!
-        loginAndRegisterButton.addTarget(self, action: #selector(btnLoginRegAction(sender:)), for: .touchUpInside)
+        loginAndRegisterButton.addTarget(self, action: #selector(registrationOrLoginPresentation(sender:)), for: .touchUpInside)
     }
     
     //MARK: - Class Methods -
@@ -88,28 +88,23 @@ class LoginAndRegisterViewController: UIViewController {
         
         AuthService.shared.RegisterUser(email: email, password: password) { ResultWithUser in
             
-            self.goToCart()
+            self.headToTheStoreBoiiii()
         }
     }
-    
     func LoginUserWithFirebase() {
         AuthService.shared.logUserin(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
             if error == nil {
-                self.goToCart()
+                self.headToTheStoreBoiiii()
             } else {
                 print("error:\(String(describing: error?.localizedDescription))")
             }
         }
     }
-    
-    func goToCart() {
-        
+    func headToTheStoreBoiiii() {
         self.dismiss(animated: true, completion: nil)
-
     }
     
     //MARK: - User Interaction -
-    
     /**
      Upon login screen, if new user, present registration instead
      */
@@ -117,9 +112,8 @@ class LoginAndRegisterViewController: UIViewController {
         showLoginRegistrationAction()
     }
     
-    
     //MARK: - Selectors -
-    @objc func btnLoginRegAction(sender: UIButton) {
+    @objc func registrationOrLoginPresentation(sender: UIButton) {
         self.view.endEditing(true)
         
         if isRegistered == false {
