@@ -28,7 +28,9 @@
 		BBDEF3BF25E80492006CB81F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3BE25E80492006CB81F /* StorageService.swift */; };
 		BBDEF3C325E80632006CB81F /* NoodlesErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3C225E80632006CB81F /* NoodlesErrorProtocol.swift */; };
 		BBDEF3D425E806D4006CB81F /* LogWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3D325E806D4006CB81F /* LogWrapper.swift */; };
-		BBDEF3D725E806EE006CB81F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3D625E806EE006CB81F /* User.swift */; };
+		BBDEF3D725E806EE006CB81F /* NoodleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3D625E806EE006CB81F /* NoodleUser.swift */; };
+		BBDEF3DB25E80D70006CB81F /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3DA25E80D70006CB81F /* OnboardViewController.swift */; };
+		BBDEF3DE25E81385006CB81F /* NoodlesTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3DD25E81384006CB81F /* NoodlesTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +59,9 @@
 		BBDEF3BE25E80492006CB81F /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		BBDEF3C225E80632006CB81F /* NoodlesErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoodlesErrorProtocol.swift; sourceTree = "<group>"; };
 		BBDEF3D325E806D4006CB81F /* LogWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogWrapper.swift; sourceTree = "<group>"; };
-		BBDEF3D625E806EE006CB81F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BBDEF3D625E806EE006CB81F /* NoodleUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoodleUser.swift; sourceTree = "<group>"; };
+		BBDEF3DA25E80D70006CB81F /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		BBDEF3DD25E81384006CB81F /* NoodlesTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoodlesTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 		BB34B79025E7E5EF0005BDCE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BBDEF3E025E813BB006CB81F /* Core */,
 				BBDEF3AE25E7F56A006CB81F /* ViewControllers */,
 			);
 			path = Controller;
@@ -175,7 +180,7 @@
 		BB34B79225E7E5FE0005BDCE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BBDEF3D625E806EE006CB81F /* User.swift */,
+				BBDEF3D625E806EE006CB81F /* NoodleUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDEF3AF25E7F586006CB81F /* LoginAndRegisterViewController.swift */,
+				BBDEF3DA25E80D70006CB81F /* OnboardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +212,14 @@
 				BBDEF3BE25E80492006CB81F /* StorageService.swift */,
 			);
 			path = FirebaseServices;
+			sourceTree = "<group>";
+		};
+		BBDEF3E025E813BB006CB81F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEF3DD25E81384006CB81F /* NoodlesTabBarController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,13 +344,15 @@
 				BBDEF3A825E7EDE2006CB81F /* Extensioin+UIView.swift in Sources */,
 				BBDEF3B925E8046B006CB81F /* CustomCodableConformance.swift in Sources */,
 				BBDEF3B525E80409006CB81F /* AuthService.swift in Sources */,
-				BBDEF3D725E806EE006CB81F /* User.swift in Sources */,
+				BBDEF3D725E806EE006CB81F /* NoodleUser.swift in Sources */,
+				BBDEF3DE25E81385006CB81F /* NoodlesTabBarController.swift in Sources */,
 				BBDEF3B025E7F586006CB81F /* LoginAndRegisterViewController.swift in Sources */,
 				BB34B77225E7E4F60005BDCE /* AppDelegate.swift in Sources */,
 				BBDEF3BC25E8048A006CB81F /* DatabaseService.swift in Sources */,
 				BBDEF3AB25E7EDEF006CB81F /* Extension+UIImage.swift in Sources */,
 				BB34B77C25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld in Sources */,
 				BBDEF3C325E80632006CB81F /* NoodlesErrorProtocol.swift in Sources */,
+				BBDEF3DB25E80D70006CB81F /* OnboardViewController.swift in Sources */,
 				BB34B77425E7E4F60005BDCE /* SceneDelegate.swift in Sources */,
 				BBDEF3D425E806D4006CB81F /* LogWrapper.swift in Sources */,
 				BBDEF3BF25E80492006CB81F /* StorageService.swift in Sources */,

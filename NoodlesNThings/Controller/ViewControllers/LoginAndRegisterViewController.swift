@@ -27,9 +27,13 @@ class LoginAndRegisterViewController: UIViewController {
     //MARK: - View Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         /// Make Navigation Bar Perty
         customNavBar()
         
+        /// Do we have a user or NOT?
+        showLoginRegistrationAction()
+
         /// UI Styling
         loginAndRegisterButton.layer.cornerRadius = 24.0
         loginAndRegisterButton.clipsToBounds = true
@@ -59,6 +63,51 @@ class LoginAndRegisterViewController: UIViewController {
         let button = UIBarButtonItem(title: " ", style: .plain, target: self, action: nil)
         navigationItem.setLeftBarButton(button, animated: true)
     }
+    func showRegisterVC() {
+        self.navigationItem.title = "Sign Up"
+        loginAndRegisterButton.setTitle("Sign Up", for: .normal)
+        dontHaveAccountLabel.text = "Already have an account?"
+        loginAndRegisterButton.setTitle("Login", for: .normal)
+        Constant.kUserDefault.set(false, forKey: Constant.kIsUserRegistered)
+        Constant.kUserDefault.synchronize()
+    }
+    func showLoginVC() {
+        self.navigationItem.title = "Login"
+        loginAndRegisterButton.setTitle("Login", for: .normal)
+        dontHaveAccountLabel.text = "Don't have an account?"
+        loginAndRegisterButton.setTitle("Sign Up", for: .normal)
+        Constant.kUserDefault.set(true, forKey: Constant.kIsUserRegistered)
+        Constant.kUserDefault.synchronize()
+        
+    }
+    func RegisterUserWithFirebase() {
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text else { return }
+        
+        AuthService.shared.RegisterUser(email: email, password: password) { ResultWithUser in
+            
+            self.goToCart()
+        }
+    }
+    
+    func LoginUserWithFirebase() {
+        AuthService.shared.logUserin(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
+            if error == nil {
+                self.goToCart()
+            } else {
+                print("error:\(String(describing: error?.localizedDescription))")
+            }
+        }
+    }
+    
+    func goToCart() {
+        
+        let tabBar = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as! NoodlesTabBarController
+//        self.dismiss(animated: true, completion: nil)
+        self.present(tabBar, animated: true, completion: nil)
+
+    }
+    
     //MARK: - User Interaction -
     
     /**
@@ -66,7 +115,6 @@ class LoginAndRegisterViewController: UIViewController {
      */
     @IBAction func toRegisterNewUser(_ sender: Any) {
         showLoginRegistrationAction()
-
     }
     
     
@@ -76,19 +124,31 @@ class LoginAndRegisterViewController: UIViewController {
         
         if isRegistered == false {
             //Login
-            //            LoginUserWithFirebase()
+            LoginUserWithFirebase()
         }
         else {
             //Registration
-            //            RegisterUserWithFirebase()
+            RegisterUserWithFirebase()
         }
     }
     @objc func showLoginRegistrationAction()  {
-        
         emailTextField.text = ""
         passwordTextField.text = ""
         isRegistered = Constant.kUserDefault.bool(forKey: Constant.kIsUserRegistered)
-//        isRegistered == false ? showLoginVC() : showRegisterVC()
+        isRegistered == false ? showLoginVC() : showRegisterVC()
     }
-    
+}
+
+//MARK: - UITextFieldDelegate -
+extension LoginAndRegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        }
+        else if textField == passwordTextField {
+            isRegistered == false ? LoginUserWithFirebase() : RegisterUserWithFirebase()
+        }
+        return true
+    }
 }

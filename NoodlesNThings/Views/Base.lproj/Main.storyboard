@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IVK-MQ-0ss">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home-->
+        <!--Onboard View Controller-->
         <scene sceneID="cHm-gC-jlJ">
             <objects>
-                <viewController storyboardIdentifier="Home" id="IVK-MQ-0ss" customClass="Home" customModule="Italian_Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IVK-MQ-0ss" customClass="OnboardViewController" customModule="NoodlesNThings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Li-PZ-4rk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,12 +45,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5w-33-Mum">
                                                 <rect key="frame" x="0.0" y="3" width="170" height="29"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
-                                                <state key="normal" title="START ORDER">
+                                                <state key="normal" title="LET'S EAT">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="btnGoToListingVC:" destination="IVK-MQ-0ss" eventType="touchUpInside" id="hwd-Ro-l4m"/>
-                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow black" translatesAutoresizingMaskIntoConstraints="NO" id="486-YY-iAO">
                                                 <rect key="frame" x="149" y="12.5" width="5" height="10"/>
@@ -212,6 +209,7 @@
                             <constraint firstItem="jHk-hg-Ouw" firstAttribute="leading" secondItem="cDc-Wc-uL1" secondAttribute="leading" id="vjD-FT-B8Y"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QY6-RW-Ijr"/>
                     <connections>
                         <outlet property="dontHaveAccountLabel" destination="jHk-hg-Ouw" id="9Tj-Kq-trX"/>
                         <outlet property="emailTextField" destination="Vbh-Eo-UTl" id="hz4-tk-2xh"/>
@@ -224,9 +222,89 @@
             </objects>
             <point key="canvasLocation" x="-882" y="254"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i1V-rn-OcE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="WL9-UR-FlF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="cutlery_deselected" selectedImage="cutlery_selected" id="bQk-Iv-Nts">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2iA-ty-uSH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2l-HS-onr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="-1526"/>
+        </scene>
+        <!--Noodles Tab Bar Controller-->
+        <scene sceneID="bqU-m7-r2v">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="NLB-MP-RNw" customClass="NoodlesTabBarController" customModule="NoodlesNThings" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="URU-Vr-mJb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WL9-UR-FlF" kind="relationship" relationship="viewControllers" id="aRN-jM-x8f"/>
+                        <segue destination="lfg-r6-MsV" kind="relationship" relationship="viewControllers" id="UPy-ll-ngN"/>
+                        <segue destination="rUj-ld-urK" kind="relationship" relationship="viewControllers" id="dbi-uI-t7S"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d90-oF-3WW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="-501"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AZm-LH-1vf">
+            <objects>
+                <navigationController id="rUj-ld-urK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="user_deselected" selectedImage="user_selected" id="Qux-Cy-fV8">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dgp-Ek-sQl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PdN-lx-8Dk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="176"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sSo-3O-8Sb">
+            <objects>
+                <navigationController id="lfg-r6-MsV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="shoppingbag_deselected" selectedImage="shoppingbag_selected" id="3qY-90-XRH">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TwX-tA-RoH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8CM-G4-hoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="-632"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow black" width="6" height="10"/>
         <image name="background" width="375" height="812"/>
+        <image name="cutlery_deselected" width="30" height="30"/>
+        <image name="cutlery_selected" width="30" height="30"/>
+        <image name="shoppingbag_deselected" width="28" height="34"/>
+        <image name="shoppingbag_selected" width="28" height="34"/>
+        <image name="user_deselected" width="24" height="29"/>
+        <image name="user_selected" width="24" height="29"/>
     </resources>
 </document>
