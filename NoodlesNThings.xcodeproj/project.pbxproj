@@ -3,29 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0522F07074A90B9B3269D816 /* Pods_NoodlesNThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69431D03049BD4F02E710A96 /* Pods_NoodlesNThings.framework */; };
 		BB34B77225E7E4F60005BDCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34B77125E7E4F60005BDCE /* AppDelegate.swift */; };
 		BB34B77425E7E4F60005BDCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34B77325E7E4F60005BDCE /* SceneDelegate.swift */; };
-		BB34B77625E7E4F60005BDCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34B77525E7E4F60005BDCE /* ViewController.swift */; };
 		BB34B77925E7E4F60005BDCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB34B77725E7E4F60005BDCE /* Main.storyboard */; };
 		BB34B77C25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB34B77A25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld */; };
 		BB34B77E25E7E4F70005BDCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB34B77D25E7E4F70005BDCE /* Assets.xcassets */; };
 		BB34B78125E7E4F70005BDCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB34B77F25E7E4F70005BDCE /* LaunchScreen.storyboard */; };
+		BB34B79525E7E8560005BDCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB34B79425E7E8560005BDCE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18255BF3C4C3031AE94A83F7 /* Pods-NoodlesNThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoodlesNThings.release.xcconfig"; path = "Target Support Files/Pods-NoodlesNThings/Pods-NoodlesNThings.release.xcconfig"; sourceTree = "<group>"; };
+		4F27493DA7B0D9DCBE505827 /* Pods-NoodlesNThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoodlesNThings.debug.xcconfig"; path = "Target Support Files/Pods-NoodlesNThings/Pods-NoodlesNThings.debug.xcconfig"; sourceTree = "<group>"; };
+		69431D03049BD4F02E710A96 /* Pods_NoodlesNThings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoodlesNThings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB34B76E25E7E4F60005BDCE /* NoodlesNThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoodlesNThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB34B77125E7E4F60005BDCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB34B77325E7E4F60005BDCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB34B77525E7E4F60005BDCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB34B77825E7E4F60005BDCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB34B77B25E7E4F60005BDCE /* NoodlesNThings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoodlesNThings.xcdatamodel; sourceTree = "<group>"; };
 		BB34B77D25E7E4F70005BDCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB34B78025E7E4F70005BDCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB34B78225E7E4F70005BDCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB34B79425E7E8560005BDCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0522F07074A90B9B3269D816 /* Pods_NoodlesNThings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		166B34DB4519E82B38CF1249 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F27493DA7B0D9DCBE505827 /* Pods-NoodlesNThings.debug.xcconfig */,
+				18255BF3C4C3031AE94A83F7 /* Pods-NoodlesNThings.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB29CEA19CAD6F9E986C65DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69431D03049BD4F02E710A96 /* Pods_NoodlesNThings.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB34B76525E7E4F60005BDCE = {
 			isa = PBXGroup;
 			children = (
 				BB34B77025E7E4F60005BDCE /* NoodlesNThings */,
 				BB34B76F25E7E4F60005BDCE /* Products */,
+				166B34DB4519E82B38CF1249 /* Pods */,
+				AB29CEA19CAD6F9E986C65DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +82,72 @@
 		BB34B77025E7E4F60005BDCE /* NoodlesNThings */ = {
 			isa = PBXGroup;
 			children = (
-				BB34B77125E7E4F60005BDCE /* AppDelegate.swift */,
-				BB34B77325E7E4F60005BDCE /* SceneDelegate.swift */,
-				BB34B77525E7E4F60005BDCE /* ViewController.swift */,
-				BB34B77725E7E4F60005BDCE /* Main.storyboard */,
-				BB34B77D25E7E4F70005BDCE /* Assets.xcassets */,
-				BB34B77F25E7E4F70005BDCE /* LaunchScreen.storyboard */,
-				BB34B78225E7E4F70005BDCE /* Info.plist */,
+				BB34B78925E7E5210005BDCE /* App */,
+				BB34B79325E7E6920005BDCE /* Helpers */,
+				BB34B79225E7E5FE0005BDCE /* Models */,
+				BB34B79125E7E5F30005BDCE /* Utilities */,
+				BB34B79025E7E5EF0005BDCE /* Controller */,
+				BB34B78F25E7E5E40005BDCE /* Extension */,
+				BB34B78C25E7E5330005BDCE /* Views */,
 				BB34B77A25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld */,
 			);
 			path = NoodlesNThings;
+			sourceTree = "<group>";
+		};
+		BB34B78925E7E5210005BDCE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BB34B77125E7E4F60005BDCE /* AppDelegate.swift */,
+				BB34B77D25E7E4F70005BDCE /* Assets.xcassets */,
+				BB34B79425E7E8560005BDCE /* GoogleService-Info.plist */,
+				BB34B77325E7E4F60005BDCE /* SceneDelegate.swift */,
+				BB34B78225E7E4F70005BDCE /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BB34B78C25E7E5330005BDCE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB34B77F25E7E4F70005BDCE /* LaunchScreen.storyboard */,
+				BB34B77725E7E4F60005BDCE /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB34B78F25E7E5E40005BDCE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BB34B79025E7E5EF0005BDCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BB34B79125E7E5F30005BDCE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BB34B79225E7E5FE0005BDCE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB34B79325E7E6920005BDCE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB34B78525E7E4F70005BDCE /* Build configuration list for PBXNativeTarget "NoodlesNThings" */;
 			buildPhases = (
+				5A77F3F7E20DA5ABC83C6E8F /* [CP] Check Pods Manifest.lock */,
 				BB34B76A25E7E4F60005BDCE /* Sources */,
 				BB34B76B25E7E4F60005BDCE /* Frameworks */,
 				BB34B76C25E7E4F60005BDCE /* Resources */,
+				DBA65251CDD1AEEFFE1D5C74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,17 +212,59 @@
 				BB34B78125E7E4F70005BDCE /* LaunchScreen.storyboard in Resources */,
 				BB34B77E25E7E4F70005BDCE /* Assets.xcassets in Resources */,
 				BB34B77925E7E4F60005BDCE /* Main.storyboard in Resources */,
+				BB34B79525E7E8560005BDCE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A77F3F7E20DA5ABC83C6E8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoodlesNThings-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBA65251CDD1AEEFFE1D5C74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoodlesNThings/Pods-NoodlesNThings-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoodlesNThings/Pods-NoodlesNThings-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoodlesNThings/Pods-NoodlesNThings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB34B76A25E7E4F60005BDCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB34B77625E7E4F60005BDCE /* ViewController.swift in Sources */,
 				BB34B77225E7E4F60005BDCE /* AppDelegate.swift in Sources */,
 				BB34B77C25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld in Sources */,
 				BB34B77425E7E4F60005BDCE /* SceneDelegate.swift in Sources */,
@@ -287,12 +411,13 @@
 		};
 		BB34B78625E7E4F70005BDCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F27493DA7B0D9DCBE505827 /* Pods-NoodlesNThings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLCFP6QUVG;
-				INFOPLIST_FILE = NoodlesNThings/Info.plist;
+				INFOPLIST_FILE = NoodlesNThings/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,12 +431,13 @@
 		};
 		BB34B78725E7E4F70005BDCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18255BF3C4C3031AE94A83F7 /* Pods-NoodlesNThings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLCFP6QUVG;
-				INFOPLIST_FILE = NoodlesNThings/Info.plist;
+				INFOPLIST_FILE = NoodlesNThings/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
