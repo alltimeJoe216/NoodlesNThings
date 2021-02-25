@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="-882" y="-483"/>
         </scene>
-        <!--Login RegistrationVC-->
+        <!--Login And Register View Controller-->
         <scene sceneID="6r6-Yx-XhE">
             <objects>
-                <viewController storyboardIdentifier="LoginRegistrationVC" id="JRO-GL-44k" customClass="LoginRegistrationVC" customModule="Italian_Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginRegistrationVC" id="JRO-GL-44k" customClass="LoginAndRegisterViewController" customModule="NoodlesNThings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ecB-GJ-ib0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +192,7 @@
                                     <color key="titleColor" red="0.90980392160000001" green="0.16078431369999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnSignUpAction:" destination="JRO-GL-44k" eventType="touchUpInside" id="m7V-ya-xvv"/>
+                                    <action selector="toRegisterNewUser:" destination="JRO-GL-44k" eventType="touchUpInside" id="m7V-ya-xvv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -213,11 +213,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnLoginRegistration" destination="Z1P-X3-ji2" id="Fcm-0e-DjA"/>
-                        <outlet property="btnShowLoginRegistration" destination="03U-lO-5Od" id="Zah-RH-jit"/>
-                        <outlet property="lblAccountText" destination="jHk-hg-Ouw" id="9Tj-Kq-trX"/>
-                        <outlet property="txtEmail" destination="Vbh-Eo-UTl" id="hz4-tk-2xh"/>
-                        <outlet property="txtPassword" destination="Z93-hr-fDb" id="Reh-oH-pew"/>
+                        <outlet property="dontHaveAccountLabel" destination="jHk-hg-Ouw" id="9Tj-Kq-trX"/>
+                        <outlet property="emailTextField" destination="Vbh-Eo-UTl" id="hz4-tk-2xh"/>
+                        <outlet property="loginAndRegisterButton" destination="Z1P-X3-ji2" id="Fcm-0e-DjA"/>
+                        <outlet property="passwordTextField" destination="Z93-hr-fDb" id="Reh-oH-pew"/>
+                        <outlet property="showRegistrationButton" destination="03U-lO-5Od" id="Zah-RH-jit"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMt-Tg-8kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
