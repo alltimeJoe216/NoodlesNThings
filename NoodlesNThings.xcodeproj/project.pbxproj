@@ -51,6 +51,12 @@
 		BBA8CA9925E81C0900EE97A7 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA8CA7525E81C0900EE97A7 /* Raleway-Thin.ttf */; };
 		BBA8CA9A25E81C0900EE97A7 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA8CA7625E81C0900EE97A7 /* Raleway-Italic.ttf */; };
 		BBA8CA9B25E81C0900EE97A7 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA8CA7725E81C0900EE97A7 /* Raleway-Bold.ttf */; };
+		BBA8CA9E25E81C6F00EE97A7 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CA9D25E81C6F00EE97A7 /* FoodItem.swift */; };
+		BBA8CAA125E81C8300EE97A7 /* FoodSubItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CAA025E81C8300EE97A7 /* FoodSubItem.swift */; };
+		BBA8CAA925E81E0100EE97A7 /* NoodleItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CAA825E81E0100EE97A7 /* NoodleItemViewController.swift */; };
+		BBA8CAAE25E8200100EE97A7 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CAAD25E8200100EE97A7 /* FoodItemTableViewCell.swift */; };
+		BBA8CAB125E8210300EE97A7 /* NoodleSubItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CAB025E8210300EE97A7 /* NoodleSubItemViewController.swift */; };
+		BBA8CAB425E8218000EE97A7 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8CAB325E8218000EE97A7 /* ItemDetailViewController.swift */; };
 		BBDEF39C25E7EBB3006CB81F /* Extension+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF39B25E7EBB3006CB81F /* Extension+AlertController.swift */; };
 		BBDEF39F25E7EC2C006CB81F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF39E25E7EC2C006CB81F /* Constants.swift */; };
 		BBDEF3A225E7EC39006CB81F /* MessageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3A125E7EC39006CB81F /* MessageConstant.swift */; };
@@ -118,6 +124,12 @@
 		BBA8CA7525E81C0900EE97A7 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		BBA8CA7625E81C0900EE97A7 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		BBA8CA7725E81C0900EE97A7 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		BBA8CA9D25E81C6F00EE97A7 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		BBA8CAA025E81C8300EE97A7 /* FoodSubItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSubItem.swift; sourceTree = "<group>"; };
+		BBA8CAA825E81E0100EE97A7 /* NoodleItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoodleItemViewController.swift; sourceTree = "<group>"; };
+		BBA8CAAD25E8200100EE97A7 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
+		BBA8CAB025E8210300EE97A7 /* NoodleSubItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoodleSubItemViewController.swift; sourceTree = "<group>"; };
+		BBA8CAB325E8218000EE97A7 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BBDEF39B25E7EBB3006CB81F /* Extension+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+AlertController.swift"; sourceTree = "<group>"; };
 		BBDEF39E25E7EC2C006CB81F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBDEF3A125E7EC39006CB81F /* MessageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConstant.swift; sourceTree = "<group>"; };
@@ -186,14 +198,13 @@
 		BB34B77025E7E4F60005BDCE /* NoodlesNThings */ = {
 			isa = PBXGroup;
 			children = (
-				BBDEF3B325E803FD006CB81F /* FirebaseServices */,
+				BB34B77725E7E4F60005BDCE /* Main.storyboard */,
 				BB34B78925E7E5210005BDCE /* App */,
+				BB34B78F25E7E5E40005BDCE /* Extension */,
 				BB34B79325E7E6920005BDCE /* Helpers */,
 				BB34B79225E7E5FE0005BDCE /* Models */,
-				BB34B79125E7E5F30005BDCE /* Utilities */,
-				BB34B79025E7E5EF0005BDCE /* Controller */,
-				BB34B78F25E7E5E40005BDCE /* Extension */,
 				BB34B78C25E7E5330005BDCE /* Views */,
+				BB34B79025E7E5EF0005BDCE /* Controller */,
 				BB34B77A25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld */,
 			);
 			path = NoodlesNThings;
@@ -202,8 +213,11 @@
 		BB34B78925E7E5210005BDCE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				BB34B77125E7E4F60005BDCE /* AppDelegate.swift */,
+				BBDEF3B325E803FD006CB81F /* FirebaseServices */,
+				BBA8CAA525E81DA800EE97A7 /* Controller */,
 				BBA8CA5125E81C0800EE97A7 /* Fonts */,
+				BB34B79125E7E5F30005BDCE /* Utilities */,
+				BB34B77125E7E4F60005BDCE /* AppDelegate.swift */,
 				BB34B77D25E7E4F70005BDCE /* Assets.xcassets */,
 				BB34B79425E7E8560005BDCE /* GoogleService-Info.plist */,
 				BB34B77325E7E4F60005BDCE /* SceneDelegate.swift */,
@@ -216,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				BB34B77F25E7E4F70005BDCE /* LaunchScreen.storyboard */,
-				BB34B77725E7E4F60005BDCE /* Main.storyboard */,
+				BBA8CAAD25E8200100EE97A7 /* FoodItemTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,7 +249,6 @@
 		BB34B79025E7E5EF0005BDCE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BBDEF3E025E813BB006CB81F /* Core */,
 				BBDEF3AE25E7F56A006CB81F /* ViewControllers */,
 			);
 			path = Controller;
@@ -254,6 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				BBDEF3D625E806EE006CB81F /* NoodleUser.swift */,
+				BBA8CA9D25E81C6F00EE97A7 /* FoodItem.swift */,
+				BBA8CAA025E81C8300EE97A7 /* FoodSubItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,11 +341,38 @@
 			path = Raleway;
 			sourceTree = "<group>";
 		};
-		BBDEF3AE25E7F56A006CB81F /* ViewControllers */ = {
+		BBA8CAA325E81D4E00EE97A7 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				BBDEF3AF25E7F586006CB81F /* LoginAndRegisterViewController.swift */,
 				BBDEF3DA25E80D70006CB81F /* OnboardViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BBA8CAA525E81DA800EE97A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEF3E025E813BB006CB81F /* TabBar */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBA8CAA725E81DBE00EE97A7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAA825E81E0100EE97A7 /* NoodleItemViewController.swift */,
+				BBA8CAB025E8210300EE97A7 /* NoodleSubItemViewController.swift */,
+				BBA8CAB325E8218000EE97A7 /* ItemDetailViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BBDEF3AE25E7F56A006CB81F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAA325E81D4E00EE97A7 /* Auth */,
+				BBA8CAA725E81DBE00EE97A7 /* Main */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -346,12 +388,12 @@
 			path = FirebaseServices;
 			sourceTree = "<group>";
 		};
-		BBDEF3E025E813BB006CB81F /* Core */ = {
+		BBDEF3E025E813BB006CB81F /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				BBDEF3DD25E81384006CB81F /* NoodlesTabBarController.swift */,
 			);
-			path = Core;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,7 +551,9 @@
 				BBDEF3A225E7EC39006CB81F /* MessageConstant.swift in Sources */,
 				BBDEF3A525E7EDD8006CB81F /* Extension+UIColor.swift in Sources */,
 				BBDEF39C25E7EBB3006CB81F /* Extension+AlertController.swift in Sources */,
+				BBA8CA9E25E81C6F00EE97A7 /* FoodItem.swift in Sources */,
 				BBDEF3A825E7EDE2006CB81F /* Extensioin+UIView.swift in Sources */,
+				BBA8CAA925E81E0100EE97A7 /* NoodleItemViewController.swift in Sources */,
 				BBDEF3B925E8046B006CB81F /* CustomCodableConformance.swift in Sources */,
 				BBDEF3B525E80409006CB81F /* AuthService.swift in Sources */,
 				BBDEF3D725E806EE006CB81F /* NoodleUser.swift in Sources */,
@@ -518,12 +562,16 @@
 				BB34B77225E7E4F60005BDCE /* AppDelegate.swift in Sources */,
 				BBDEF3BC25E8048A006CB81F /* DatabaseService.swift in Sources */,
 				BBDEF3AB25E7EDEF006CB81F /* Extension+UIImage.swift in Sources */,
+				BBA8CAB125E8210300EE97A7 /* NoodleSubItemViewController.swift in Sources */,
 				BB34B77C25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld in Sources */,
 				BBDEF3C325E80632006CB81F /* NoodlesErrorProtocol.swift in Sources */,
 				BBDEF3DB25E80D70006CB81F /* OnboardViewController.swift in Sources */,
+				BBA8CAAE25E8200100EE97A7 /* FoodItemTableViewCell.swift in Sources */,
+				BBA8CAB425E8218000EE97A7 /* ItemDetailViewController.swift in Sources */,
 				BB34B77425E7E4F60005BDCE /* SceneDelegate.swift in Sources */,
 				BBDEF3D425E806D4006CB81F /* LogWrapper.swift in Sources */,
 				BBDEF3BF25E80492006CB81F /* StorageService.swift in Sources */,
+				BBA8CAA125E81C8300EE97A7 /* FoodSubItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
