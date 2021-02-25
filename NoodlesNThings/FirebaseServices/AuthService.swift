@@ -110,6 +110,16 @@ class AuthService {
             self.user = NoodleUser(id: authResult.user.uid, email: authResult.user.email)
             completion(result, error)
         }
-        
+    }
+    
+    // MARK: - Sign Out -
+    func signOut(completion: @escaping(Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(true)
+        } catch let error {
+            self.log.error("Sign out error?", error.localizedDescription)
+            completion(false)
+        }
     }
 }

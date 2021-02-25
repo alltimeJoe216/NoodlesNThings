@@ -9,6 +9,8 @@ import UIKit
 
 class LoginAndRegisterViewController: UIViewController {
     
+    static let identifier = "LoginRegID"
+    
     //MARK: - UI Outlets -
     @IBOutlet weak var loginAndRegisterButton: UIButton!
     @IBOutlet weak var dontHaveAccountLabel: UILabel!
@@ -102,9 +104,7 @@ class LoginAndRegisterViewController: UIViewController {
     
     func goToCart() {
         
-        let tabBar = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as! NoodlesTabBarController
-//        self.dismiss(animated: true, completion: nil)
-        self.present(tabBar, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
 
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IVK-MQ-0ss">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NLB-MP-RNw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -21,7 +21,7 @@
         <!--Onboard View Controller-->
         <scene sceneID="cHm-gC-jlJ">
             <objects>
-                <viewController id="IVK-MQ-0ss" customClass="OnboardViewController" customModule="NoodlesNThings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardID" id="IVK-MQ-0ss" customClass="OnboardViewController" customModule="NoodlesNThings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Li-PZ-4rk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,7 +105,7 @@
         <!--Login And Register View Controller-->
         <scene sceneID="6r6-Yx-XhE">
             <objects>
-                <viewController storyboardIdentifier="LoginRegistrationVC" id="JRO-GL-44k" customClass="LoginAndRegisterViewController" customModule="NoodlesNThings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginRegID" id="JRO-GL-44k" customClass="LoginAndRegisterViewController" customModule="NoodlesNThings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ecB-GJ-ib0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

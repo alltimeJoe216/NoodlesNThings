@@ -9,6 +9,9 @@ import UIKit
 
 class OnboardViewController: UIViewController {
     
+    static let identifier = "OnboardID"
+
+    
     //MARK: - UI Outlets -
     @IBOutlet weak var viewStartOrder: UIView!
     @IBOutlet weak var imgViewBackground: UIImageView!
