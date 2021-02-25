@@ -245,7 +245,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="4sy-C3-Y0I" kind="presentation" modalPresentationStyle="fullScreen" id="HiQ-50-wYk"/>
+                        <segue destination="4sy-C3-Y0I" kind="relationship" relationship="rootViewController" id="s4d-VI-ffE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2l-HS-onr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,7 +288,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="CXG-7J-rKs" kind="presentation" modalPresentationStyle="fullScreen" id="gRG-TD-fnG"/>
+                        <segue destination="CXG-7J-rKs" kind="relationship" relationship="rootViewController" id="gE6-x6-gTT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdN-lx-8Dk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -307,7 +307,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="MdZ-XV-ebp" kind="presentation" modalPresentationStyle="fullScreen" id="CdY-iq-fpL"/>
+                        <segue destination="MdZ-XV-ebp" kind="relationship" relationship="rootViewController" id="j0b-7k-3Sb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8CM-G4-hoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -319,11 +319,11 @@
             <objects>
                 <viewController storyboardIdentifier="ItemVC" id="4sy-C3-Y0I" customClass="NoodleItemViewController" customModule="NoodlesNThings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jJw-1t-T4H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="763"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AKh-42-NVK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="763"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="251" id="VsE-wO-8xi" customClass="FoodItemTableViewCell" customModule="NoodlesNThings" customModuleProvider="target">
@@ -419,7 +419,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colCellSubListing" id="RkM-nP-FSp" customClass="colCellSubItem" customModule="Italian_Restaurant" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SubItemCollectionViewCell" id="RkM-nP-FSp" customClass="SubItemCollectionViewCell" customModule="NoodlesNThings" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="255"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -502,11 +502,11 @@
                                             <constraint firstAttribute="bottom" secondItem="BHk-Lf-mGG" secondAttribute="bottom" id="pqb-Z1-xWk"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="imgViewName" destination="7PP-53-58G" id="ORn-60-Np4"/>
-                                            <outlet property="lblName" destination="xYS-GO-ZKF" id="4RL-p5-eZq"/>
-                                            <outlet property="lblSizeLPrice" destination="YwD-HN-Aog" id="lhF-sD-WuF"/>
-                                            <outlet property="lblSizeMPrice" destination="pzv-Jo-6V0" id="oSZ-Td-u9k"/>
-                                            <outlet property="viewBgSublisting" destination="BHk-Lf-mGG" id="lmS-Bv-hRa"/>
+                                            <outlet property="backgroundSubListView" destination="BHk-Lf-mGG" id="olP-Nl-Hxj"/>
+                                            <outlet property="imageViewName" destination="7PP-53-58G" id="tvW-O6-Gbm"/>
+                                            <outlet property="nameLabel" destination="xYS-GO-ZKF" id="GJM-ea-nze"/>
+                                            <outlet property="sizePriceLLabel" destination="PU5-iY-N8Z" id="reL-Du-Lms"/>
+                                            <outlet property="sizePriceMLabel" destination="pzv-Jo-6V0" id="8hD-9l-Mhe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -573,7 +573,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="kFl-E6-7Ly" secondAttribute="bottom" id="r7C-nH-YDP"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-Dw-B7T" customClass="viewItemDescription" customModule="Italian_Restaurant" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-Dw-B7T" customClass="ItemDescriptionView" customModule="Italian_Restaurant" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="333" width="375" height="174"/>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.1333333333" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -593,7 +593,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RxV-EI-Zcb">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DescriptionCollectionViewCell" id="RxV-EI-Zcb" customClass="DescriptionCollectionViewCell" customModule="NoodlesNThings" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -659,11 +659,11 @@
             <objects>
                 <viewController id="MdZ-XV-ebp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ghZ-rw-490">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to cart VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WkE-El-MOM">
-                                <rect key="frame" x="137.5" y="434.5" width="139" height="27"/>
+                                <rect key="frame" x="137.5" y="393" width="139" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -687,11 +687,11 @@
             <objects>
                 <viewController id="CXG-7J-rKs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vGH-et-Byq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Profile VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ0-Fc-aCR">
-                                <rect key="frame" x="135" y="434.5" width="144" height="27"/>
+                                <rect key="frame" x="135" y="393" width="144" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

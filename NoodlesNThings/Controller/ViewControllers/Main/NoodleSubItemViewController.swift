@@ -75,7 +75,7 @@ class NoodleSubItemViewController: UIViewController, UICollectionViewDataSource,
     
     func setUpNavBar()  {
         navigationItem.title = strSubItemTitle
-
+        
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.setHidesBackButton(false, animated: false)
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -91,28 +91,28 @@ class NoodleSubItemViewController: UIViewController, UICollectionViewDataSource,
         navigationItem.leftItemsSupplementBackButton = true
         navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: self, action: nil)
         
-    
+        
     }
     
     func restoreNavBarShadow() {
         self.navigationController?.navigationBar.setBackgroundImage(nil, for:.default)
         self.navigationController?.navigationBar.shadowImage = nil
     }
-   
+    
     
     @objc func dismiss(fromGesture gesture: UISwipeGestureRecognizer) {
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-
+        
     }
     
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return subItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colCellSubListing", for: indexPath) as! SubItemCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubItemCollectionViewCell", for: indexPath) as! SubItemCollectionViewCell
         cell.subItem = subItems[indexPath.row]
         return cell
     }
@@ -131,5 +131,5 @@ class NoodleSubItemViewController: UIViewController, UICollectionViewDataSource,
         return 0
     }
     
-
+    
 }
