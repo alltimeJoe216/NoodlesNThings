@@ -15,6 +15,9 @@
 		BB34B77E25E7E4F70005BDCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB34B77D25E7E4F70005BDCE /* Assets.xcassets */; };
 		BB34B78125E7E4F70005BDCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB34B77F25E7E4F70005BDCE /* LaunchScreen.storyboard */; };
 		BB34B79525E7E8560005BDCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB34B79425E7E8560005BDCE /* GoogleService-Info.plist */; };
+		BBDEF39C25E7EBB3006CB81F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF39B25E7EBB3006CB81F /* AlertController.swift */; };
+		BBDEF39F25E7EC2C006CB81F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF39E25E7EC2C006CB81F /* Constants.swift */; };
+		BBDEF3A225E7EC39006CB81F /* MessageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEF3A125E7EC39006CB81F /* MessageConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		BB34B78025E7E4F70005BDCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB34B78225E7E4F70005BDCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB34B79425E7E8560005BDCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BBDEF39B25E7EBB3006CB81F /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		BBDEF39E25E7EC2C006CB81F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BBDEF3A125E7EC39006CB81F /* MessageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 		BB34B78F25E7E5E40005BDCE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BBDEF39B25E7EBB3006CB81F /* AlertController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -146,6 +153,8 @@
 		BB34B79325E7E6920005BDCE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BBDEF39E25E7EC2C006CB81F /* Constants.swift */,
+				BBDEF3A125E7EC39006CB81F /* MessageConstant.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -265,6 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDEF39F25E7EC2C006CB81F /* Constants.swift in Sources */,
+				BBDEF3A225E7EC39006CB81F /* MessageConstant.swift in Sources */,
+				BBDEF39C25E7EBB3006CB81F /* AlertController.swift in Sources */,
 				BB34B77225E7E4F60005BDCE /* AppDelegate.swift in Sources */,
 				BB34B77C25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld in Sources */,
 				BB34B77425E7E4F60005BDCE /* SceneDelegate.swift in Sources */,
