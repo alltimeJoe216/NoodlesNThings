@@ -34,10 +34,10 @@ class ItemDetailViewController:UIViewController,UICollectionViewDataSource, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    func initLandscape() {
         navigationItem.largeTitleDisplayMode = .never
-        
         viewHeader.backgroundColor = UIColor.navigationBgColor
         mainScrollView.backgroundColor = UIColor.white
         colViewItemDetail.isPagingEnabled = true
@@ -55,7 +55,7 @@ class ItemDetailViewController:UIViewController,UICollectionViewDataSource, UICo
         let gesture = UISwipeGestureRecognizer(target: self, action: #selector(dismiss(fromGesture:)))
         mainScrollView.addGestureRecognizer(gesture)
         viewMenu.delegate = self
-    
+        
     }
     
     func removeNavBarShadow() {

@@ -229,13 +229,9 @@
 			isa = PBXGroup;
 			children = (
 				BB34B77725E7E4F60005BDCE /* Main.storyboard */,
+				BB34B77F25E7E4F70005BDCE /* LaunchScreen.storyboard */,
 				BB34B78925E7E5210005BDCE /* App */,
-				BB34B78F25E7E5E40005BDCE /* Extension */,
-				BB34B79325E7E6920005BDCE /* Helpers */,
-				BB34B79225E7E5FE0005BDCE /* Models */,
-				BB34B78C25E7E5330005BDCE /* Views */,
-				BB34B79025E7E5EF0005BDCE /* Controller */,
-				BB34B77A25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld */,
+				BBF9D9BC25E86AEA00273C2F /* Features */,
 			);
 			path = NoodlesNThings;
 			sourceTree = "<group>";
@@ -243,29 +239,17 @@
 		BB34B78925E7E5210005BDCE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				BBDEF3B325E803FD006CB81F /* FirebaseServices */,
+				BB34B77125E7E4F60005BDCE /* AppDelegate.swift */,
+				BB34B77325E7E4F60005BDCE /* SceneDelegate.swift */,
+				BBDEF3B325E803FD006CB81F /* FirebaseCore */,
+				BB34B79225E7E5FE0005BDCE /* Models */,
 				BBA8CAA525E81DA800EE97A7 /* Controller */,
+				BB34B79325E7E6920005BDCE /* Constants */,
 				BBA8CA5125E81C0800EE97A7 /* Fonts */,
 				BB34B79125E7E5F30005BDCE /* Utilities */,
-				BB34B77125E7E4F60005BDCE /* AppDelegate.swift */,
-				BB34B77D25E7E4F70005BDCE /* Assets.xcassets */,
-				BB34B79425E7E8560005BDCE /* GoogleService-Info.plist */,
-				BB34B77325E7E4F60005BDCE /* SceneDelegate.swift */,
-				BB34B78225E7E4F70005BDCE /* Info.plist */,
+				BBF9D9D225E86ED600273C2F /* Resources */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		BB34B78C25E7E5330005BDCE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BBA8CADD25E8237200EE97A7 /* Detail */,
-				BBA8CADC25E8236C00EE97A7 /* SubItems */,
-				BB34B77F25E7E4F70005BDCE /* LaunchScreen.storyboard */,
-				BBA8CAE525E8242100EE97A7 /* SubItemCollectionViewCell.swift */,
-				BBA8CAAD25E8200100EE97A7 /* FoodItemTableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		BB34B78F25E7E5E40005BDCE /* Extension */ = {
@@ -279,17 +263,10 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		BB34B79025E7E5EF0005BDCE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				BBDEF3AE25E7F56A006CB81F /* ViewControllers */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		BB34B79125E7E5F30005BDCE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BB34B78F25E7E5E40005BDCE /* Extension */,
 				BBDEF3D325E806D4006CB81F /* LogWrapper.swift */,
 				BBDEF3C225E80632006CB81F /* NoodlesErrorProtocol.swift */,
 			);
@@ -299,20 +276,18 @@
 		BB34B79225E7E5FE0005BDCE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BBDEF3D625E806EE006CB81F /* NoodleUser.swift */,
-				BBA8CA9D25E81C6F00EE97A7 /* FoodItem.swift */,
-				BBA8CAA025E81C8300EE97A7 /* FoodSubItem.swift */,
+				BB34B77A25E7E4F60005BDCE /* NoodlesNThings.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BB34B79325E7E6920005BDCE /* Helpers */ = {
+		BB34B79325E7E6920005BDCE /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				BBDEF39E25E7EC2C006CB81F /* Constants.swift */,
 				BBDEF3A125E7EC39006CB81F /* MessageConstant.swift */,
 			);
-			path = Helpers;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		BBA8CA5125E81C0800EE97A7 /* Fonts */ = {
@@ -377,8 +352,8 @@
 		BBA8CAA325E81D4E00EE97A7 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				BBDEF3AF25E7F586006CB81F /* LoginAndRegisterViewController.swift */,
-				BBDEF3DA25E80D70006CB81F /* OnboardViewController.swift */,
+				BBF9D9CE25E86D9700273C2F /* Model */,
+				BBF9D9BE25E86B3D00273C2F /* ViewControllers */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -391,16 +366,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		BBA8CAA725E81DBE00EE97A7 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				BBA8CAA825E81E0100EE97A7 /* NoodleItemViewController.swift */,
-				BBA8CAB025E8210300EE97A7 /* NoodleSubItemViewController.swift */,
-				BBA8CAB325E8218000EE97A7 /* ItemDetailViewController.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		BBA8CADC25E8236C00EE97A7 /* SubItems */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,22 +375,10 @@
 			path = SubItems;
 			sourceTree = "<group>";
 		};
-		BBA8CADD25E8237200EE97A7 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				BBA8CAFA25E8268100EE97A7 /* Order */,
-				BBA8CAF925E8267A00EE97A7 /* Menu */,
-				BBA8CAF825E8267400EE97A7 /* Description */,
-				BBA8CAF725E8266A00EE97A7 /* AddToCart */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		BBA8CAF725E8266A00EE97A7 /* AddToCart */ = {
 			isa = PBXGroup;
 			children = (
-				BBA8CAFC25E826C900EE97A7 /* CVReusableFooterView.xib */,
-				BBA8CAFD25E826C900EE97A7 /* CVReusableFooterView.swift */,
+				BBF9D9C425E86B8A00273C2F /* Cell&Nib */,
 			);
 			path = AddToCart;
 			sourceTree = "<group>";
@@ -433,8 +386,9 @@
 		BBA8CAF825E8267400EE97A7 /* Description */ = {
 			isa = PBXGroup;
 			children = (
-				BBA8CB0325E8277300EE97A7 /* DescriptionCollectionViewCell.swift */,
-				BBA8CB0425E8277300EE97A7 /* DescriptionCollectionViewCell.xib */,
+				BBF9D9D025E86DE300273C2F /* Model */,
+				BBF9D9CA25E86C2D00273C2F /* ViewControllers */,
+				BBF9D9C225E86B8000273C2F /* Cell&Nib */,
 			);
 			path = Description;
 			sourceTree = "<group>";
@@ -442,10 +396,9 @@
 		BBA8CAF925E8267A00EE97A7 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				BBA8CB0B25E827B200EE97A7 /* MenuCollectionViewCell.swift */,
-				BBA8CB0925E827B200EE97A7 /* MenuCollectionViewCell.xib */,
-				BBA8CB0C25E827B200EE97A7 /* ItemDescriptionView.swift */,
-				BBA8CB0A25E827B200EE97A7 /* ItemDescriptionView.xib */,
+				BBF9D9CD25E86D8900273C2F /* Models */,
+				BBF9D9C825E86BD800273C2F /* ViewControllers */,
+				BBF9D9C025E86B7300273C2F /* Cell&Nib */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -453,24 +406,12 @@
 		BBA8CAFA25E8268100EE97A7 /* Order */ = {
 			isa = PBXGroup;
 			children = (
-				BBA8CB1225E827BD00EE97A7 /* OrderCollectionViewCell.swift */,
-				BBA8CB1425E827BD00EE97A7 /* OrderCollectionViewCell.xib */,
-				BBA8CB1525E827BD00EE97A7 /* ItemSizeCollectionViewCell.swift */,
-				BBA8CB1325E827BD00EE97A7 /* ItemSizeCollectionViewCell.xib */,
+				BBF9D9C625E86B9500273C2F /* Cell&Nib */,
 			);
 			path = Order;
 			sourceTree = "<group>";
 		};
-		BBDEF3AE25E7F56A006CB81F /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				BBA8CAA325E81D4E00EE97A7 /* Auth */,
-				BBA8CAA725E81DBE00EE97A7 /* Main */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		BBDEF3B325E803FD006CB81F /* FirebaseServices */ = {
+		BBDEF3B325E803FD006CB81F /* FirebaseCore */ = {
 			isa = PBXGroup;
 			children = (
 				BBDEF3B425E80409006CB81F /* AuthService.swift */,
@@ -478,7 +419,7 @@
 				BBDEF3BB25E8048A006CB81F /* DatabaseService.swift */,
 				BBDEF3BE25E80492006CB81F /* StorageService.swift */,
 			);
-			path = FirebaseServices;
+			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
 		BBDEF3E025E813BB006CB81F /* TabBar */ = {
@@ -487,6 +428,121 @@
 				BBDEF3DD25E81384006CB81F /* NoodlesTabBarController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		BBF9D9BC25E86AEA00273C2F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAA325E81D4E00EE97A7 /* Auth */,
+				BBA8CAF925E8267A00EE97A7 /* Menu */,
+				BBA8CAF825E8267400EE97A7 /* Description */,
+				BBA8CAF725E8266A00EE97A7 /* AddToCart */,
+				BBA8CAFA25E8268100EE97A7 /* Order */,
+				BBA8CADC25E8236C00EE97A7 /* SubItems */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BBF9D9BE25E86B3D00273C2F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEF3AF25E7F586006CB81F /* LoginAndRegisterViewController.swift */,
+				BBDEF3DA25E80D70006CB81F /* OnboardViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BBF9D9C025E86B7300273C2F /* Cell&Nib */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAAD25E8200100EE97A7 /* FoodItemTableViewCell.swift */,
+				BBA8CB0B25E827B200EE97A7 /* MenuCollectionViewCell.swift */,
+				BBA8CB0925E827B200EE97A7 /* MenuCollectionViewCell.xib */,
+			);
+			path = "Cell&Nib";
+			sourceTree = "<group>";
+		};
+		BBF9D9C225E86B8000273C2F /* Cell&Nib */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAE525E8242100EE97A7 /* SubItemCollectionViewCell.swift */,
+				BBA8CB0C25E827B200EE97A7 /* ItemDescriptionView.swift */,
+				BBA8CB0A25E827B200EE97A7 /* ItemDescriptionView.xib */,
+				BBA8CB0325E8277300EE97A7 /* DescriptionCollectionViewCell.swift */,
+				BBA8CB0425E8277300EE97A7 /* DescriptionCollectionViewCell.xib */,
+			);
+			path = "Cell&Nib";
+			sourceTree = "<group>";
+		};
+		BBF9D9C425E86B8A00273C2F /* Cell&Nib */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAFC25E826C900EE97A7 /* CVReusableFooterView.xib */,
+				BBA8CAFD25E826C900EE97A7 /* CVReusableFooterView.swift */,
+			);
+			path = "Cell&Nib";
+			sourceTree = "<group>";
+		};
+		BBF9D9C625E86B9500273C2F /* Cell&Nib */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CB1225E827BD00EE97A7 /* OrderCollectionViewCell.swift */,
+				BBA8CB1425E827BD00EE97A7 /* OrderCollectionViewCell.xib */,
+				BBA8CB1525E827BD00EE97A7 /* ItemSizeCollectionViewCell.swift */,
+				BBA8CB1325E827BD00EE97A7 /* ItemSizeCollectionViewCell.xib */,
+			);
+			path = "Cell&Nib";
+			sourceTree = "<group>";
+		};
+		BBF9D9C825E86BD800273C2F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAA825E81E0100EE97A7 /* NoodleItemViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BBF9D9CA25E86C2D00273C2F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAB025E8210300EE97A7 /* NoodleSubItemViewController.swift */,
+				BBA8CAB325E8218000EE97A7 /* ItemDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BBF9D9CD25E86D8900273C2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CA9D25E81C6F00EE97A7 /* FoodItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BBF9D9CE25E86D9700273C2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEF3D625E806EE006CB81F /* NoodleUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBF9D9D025E86DE300273C2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BBA8CAA025E81C8300EE97A7 /* FoodSubItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBF9D9D225E86ED600273C2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB34B77D25E7E4F70005BDCE /* Assets.xcassets */,
+				BB34B79425E7E8560005BDCE /* GoogleService-Info.plist */,
+				BB34B78225E7E4F70005BDCE /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -830,7 +886,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLCFP6QUVG;
-				INFOPLIST_FILE = NoodlesNThings/App/Info.plist;
+				INFOPLIST_FILE = NoodlesNThings/App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -850,7 +906,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLCFP6QUVG;
-				INFOPLIST_FILE = NoodlesNThings/App/Info.plist;
+				INFOPLIST_FILE = NoodlesNThings/App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

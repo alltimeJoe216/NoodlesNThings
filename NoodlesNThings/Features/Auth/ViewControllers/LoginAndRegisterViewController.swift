@@ -9,6 +9,7 @@ import UIKit
 
 class LoginAndRegisterViewController: UIViewController {
     
+    
     static let identifier = "LoginRegID"
     
     //MARK: - UI Outlets -

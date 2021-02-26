@@ -8,24 +8,22 @@
 import UIKit
 
 class MenuCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var lblMenuTitle: UILabel!
     
-        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-         lblMenuTitle.textColor = UIColor.gray
-      
+        lblMenuTitle.textColor = UIColor.gray
     }
     
     override var isSelected: Bool {
         didSet{
-
-             lblMenuTitle.textColor = isSelected ? UIColor.selectedTextColor : UIColor.deselectedTextcolor
+            
+            lblMenuTitle.textColor = isSelected ? UIColor.selectedTextColor : UIColor.deselectedTextcolor
             
         }
     }
-
-
+    
+    
 }
