@@ -36,7 +36,7 @@ class LoginAndRegisterViewController: UIViewController {
         
         /// Do we have a user or NOT?
         showLoginRegistrationAction()
-
+        
         /// UI Styling
         loginAndRegisterButton.layer.cornerRadius = 24.0
         loginAndRegisterButton.clipsToBounds = true
@@ -83,26 +83,26 @@ class LoginAndRegisterViewController: UIViewController {
         Constant.kUserDefault.synchronize()
         
     }
+    
+    //MARK: Login / Register
     func RegisterUserWithFirebase() {
         guard let email = emailTextField.text,
               let password = passwordTextField.text else { return }
-        
         AuthService.shared.RegisterUser(email: email, password: password) { ResultWithUser in
-            
             self.headToTheStoreBoiiii()
         }
     }
+    
     func LoginUserWithFirebase() {
         AuthService.shared.logUserin(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
-            if error == nil {
-                self.headToTheStoreBoiiii()
-            } else {
-                print("error:\(String(describing: error?.localizedDescription))")
-            }
+            error == nil ? self.headToTheStoreBoiiii() : print("error:\(String(describing: error?.localizedDescription))")
         }
     }
+    
     func headToTheStoreBoiiii() {
-        self.dismiss(animated: true, completion: nil)
+        let vc = (storyboard?.instantiateViewController(identifier: "tabBar"))! as NoodlesTabBarController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     //MARK: - User Interaction -
@@ -117,15 +117,12 @@ class LoginAndRegisterViewController: UIViewController {
     @objc func registrationOrLoginPresentation(sender: UIButton) {
         self.view.endEditing(true)
         
-        if isRegistered == false {
-            //Login
-            LoginUserWithFirebase()
-        }
-        else {
-            //Registration
-            RegisterUserWithFirebase()
-        }
+        isRegistered == false ? LoginUserWithFirebase() : RegisterUserWithFirebase()
+        
+        //        if isRegistered == false { LoginUserWithFirebase()}
+        //        else { RegisterUserWithFirebase()}
     }
+    
     @objc func showLoginRegistrationAction()  {
         emailTextField.text = ""
         passwordTextField.text = ""

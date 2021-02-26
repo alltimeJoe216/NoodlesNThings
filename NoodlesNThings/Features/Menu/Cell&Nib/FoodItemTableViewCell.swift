@@ -15,7 +15,6 @@ class FoodItemTableViewCell: UITableViewCell {
     
     @IBOutlet weak var numberOfItemsLabel: UILabel!
     
-    
     @IBOutlet weak var viewGradient: UIView!
     
     var item: FoodItem? {

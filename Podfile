@@ -9,6 +9,5 @@ target 'NoodlesNThings' do
 	pod 'SDWebImage'
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
-	pod 'Firebase/Storage'
 
 end

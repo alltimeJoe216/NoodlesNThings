@@ -13,41 +13,45 @@ protocol scrollDelegate : class {
 
 class ItemDetailViewController:UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, scrollDelegate {
     
+    //MARK: - UI Outlets -
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var viewHeader: UIView!
     @IBOutlet weak var colViewItemDetail: UICollectionView!
     @IBOutlet weak var viewMenu: ItemDescriptionView!
     
+    //MARK: - Class Properties -
     let footerViewReuseIdentifier = "CVReusableFooterView"
     
+    //MARK: - Overrides and Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.25) {
             self.setNeedsStatusBarAppearanceUpdate()
             self.removeNavBarShadow()
         }
     }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initLandscape()
     }
     
+    //MARK: - Config UI -
     func initLandscape() {
+        
+        /// Styling
         navigationItem.largeTitleDisplayMode = .never
         viewHeader.backgroundColor = UIColor.navigationBgColor
         mainScrollView.backgroundColor = UIColor.white
         colViewItemDetail.isPagingEnabled = true
     
+        /// CV Cell/Nib Registration
         colViewItemDetail.register(UINib(nibName: "OrderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "OrderCollectionViewCell")
         colViewItemDetail.register(UINib(nibName: "DescriptionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DescriptionCollectionViewCell")
-        
         colViewItemDetail.register(UINib(nibName: "CVReusableFooterView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerViewReuseIdentifier)
         
-      
         if let flowLayout = colViewItemDetail.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.sectionFootersPinToVisibleBounds = true
         }

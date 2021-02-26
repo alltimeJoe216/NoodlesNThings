@@ -13,7 +13,6 @@ class NoodleItemViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - DUMMY Data (hey, that's not nice) -
-    
     var items: [FoodItem] = {
         var item1 = FoodItem()
         item1.itemImageName = "pizza"

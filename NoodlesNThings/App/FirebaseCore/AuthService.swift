@@ -9,21 +9,6 @@ import Foundation
 import Firebase
 import FirebaseAuth
 
-//TODO: Create own file for error handler
-enum AuthErrorHandler: NoodlesErrorProtocol {
-    case unknown(domain: String, description: String = "An unknown Error Occurred.")
-    case notSignedIn(domain: String, description: String = "The user wasn't signed in")
-    
-    var nsError: NSError {
-        switch self {
-        case .unknown(let domain, let description):
-            return NSError(domain: domain, code: 999, userInfo: ["NSLocalizedDescriptionKey": description])
-        case .notSignedIn(domain: let domain, description: let description):
-            return NSError(domain: domain, code: 999, userInfo: ["NSLocalizedDescriptionKey": description])
-        }
-    }
-}
-
 /// - Usage
 /// ```
 /// complete(.success(Void())
@@ -39,13 +24,30 @@ enum AuthErrorHandler: NoodlesErrorProtocol {
 /// ```
 typealias CompleteVoid = (Result<Void, Error>) -> Void
 
+//TODO: Create own file for error handler
+enum AuthErrorHandler: NoodlesErrorProtocol {
+    case unknown(domain: String, description: String = "An unknown Error Occurred.")
+    case notSignedIn(domain: String, description: String = "The user wasn't signed in")
+    
+    var nsError: NSError {
+        switch self {
+        case .unknown(let domain, let description):
+            return NSError(domain: domain, code: 999, userInfo: ["NSLocalizedDescriptionKey": description])
+        case .notSignedIn(domain: let domain, description: let description):
+            return NSError(domain: domain, code: 999, userInfo: ["NSLocalizedDescriptionKey": description])
+        }
+    }
+}
+
 class AuthService {
-    let log = OSLog(AuthService.self, category: "Singleton_ModelController_Firebase_Auth")
+    
     // MARK: - Singleton -
     static let shared = AuthService()
+    
     private init() { }
     
-    
+    //MARK: - Class Properties -
+    let log = OSLog(AuthService.self, category: "Singleton_ModelController_Firebase_Auth")
     let databaseService = DatabaseService()
     var user: NoodleUser?
     
