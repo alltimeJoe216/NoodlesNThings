@@ -226,13 +226,13 @@
 			children = (
 				BB34B77725E7E4F60005BDCE /* Main.storyboard */,
 				BB34B77F25E7E4F70005BDCE /* LaunchScreen.storyboard */,
-				BB34B78925E7E5210005BDCE /* App */,
+				BB34B78925E7E5210005BDCE /* Core */,
 				BBF9D9BC25E86AEA00273C2F /* Features */,
 			);
 			path = NoodlesNThings;
 			sourceTree = "<group>";
 		};
-		BB34B78925E7E5210005BDCE /* App */ = {
+		BB34B78925E7E5210005BDCE /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				BB34B77125E7E4F60005BDCE /* AppDelegate.swift */,
@@ -245,7 +245,7 @@
 				BB34B79125E7E5F30005BDCE /* Utilities */,
 				BBF9D9D225E86ED600273C2F /* Resources */,
 			);
-			path = App;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		BB34B78F25E7E5E40005BDCE /* Extension */ = {
